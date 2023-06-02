@@ -54,7 +54,7 @@ function cadastrar() {
         data,
         concluida:false
     }
-    if (despesa.propriedade.length == 0 || despesa.inquilino.length||despesa.endereco.length||despesa.valor.length||despesa.litros.length||despesa.data.length == 0 ){
+    if (despesa.propriedade.length || despesa.inquilino.length||despesa.endereco.length||despesa.valor.length||despesa.litros.length||despesa.data.length == 0 ){
       document.querySelector("#propriedade").classList.add("is-invalid")
       document.querySelector("#inquilino").classList.add("is-invalid")
       document.querySelector("#endereco").classList.add("is-invalid")
