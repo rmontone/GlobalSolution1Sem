@@ -54,17 +54,29 @@ function cadastrar() {
         data,
         concluida:false
     }
-    if (despesa.propriedade.length || despesa.inquilino.length||despesa.endereco.length||despesa.valor.length||despesa.litros.length||despesa.data.length == 0 ){
-      document.querySelector("#propriedade").classList.add("is-invalid")
-      document.querySelector("#inquilino").classList.add("is-invalid")
-      document.querySelector("#endereco").classList.add("is-invalid")
-      document.querySelector("#valor").classList.add("is-invalid")
-      document.querySelector("#litros").classList.add("is-invalid")
-      document.querySelector("#data").classList.add("is-invalid")
-      return
-    }
+    if (despesa.propriedade.length == 0 || despesa.inquilino.length==0||despesa.endereco.length==0||despesa.valor.length==0||despesa.litros.length==0||despesa.data.length == 0 ){
 
- 
+    if (despesa.inquilino.length == 0 ){
+      document.querySelector("#inquilino").classList.add("is-invalid")
+      
+    }
+    if (despesa.endereco.length == 0 ){
+      document.querySelector("#endereco").classList.add("is-invalid")
+      
+    }
+    if (despesa.valor.length == 0 ){
+      document.querySelector("#valor").classList.add("is-invalid")
+      
+    }
+    if (despesa.litros.length == 0 ){
+      document.querySelector("#litros").classList.add("is-invalid")
+      
+    }
+    if (despesa.data.length == 0 ){
+      document.querySelector("#data").classList.add("is-invalid")
+    } 
+    return
+    }
     lista_despesas.push(despesa)
     document.querySelector("#despesas").innerHTML += gerarCard(despesa)
     document.querySelector("#propriedade").value=""
