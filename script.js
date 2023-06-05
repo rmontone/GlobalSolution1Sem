@@ -84,7 +84,16 @@ function cadastrar() {
     salvar()
     modal.hide()
 }
-
+document.querySelector('#botaoconsumo').addEventListener('click', () => {
+  var LitrosTotal = 0;
+  var GastosTotal = 0;
+  lista_despesas.forEach(despesa => {
+    GastosTotal = parseInt(despesa.valor) + parseInt(GastosTotal)
+    LitrosTotal = parseInt(despesa.litros) + parseInt(LitrosTotal)
+  })
+  document.querySelector('#LitrosTotal').textContent = "Total de Litros: " + LitrosTotal + " litros"
+  document.querySelector('#GastosTotal').textContent = "Total de gastos: R$ " + GastosTotal 
+})
 function atualizar(){
   document.querySelector("#despesas").innerHTML = ""
   lista_despesas.forEach((despesa)=> {
