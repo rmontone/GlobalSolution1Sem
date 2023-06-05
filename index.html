@@ -51,6 +51,9 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Cadastrar propriedade
     </button>
+    <button type="button" id="botaoconsumo" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#consumoModal">
+      Analise de consumo total
+    </button>
   </div>
 
 
@@ -66,6 +69,7 @@
 
 
   <!-- Modal -->
+
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -91,15 +95,16 @@
              <div class="col-12">
               <input id="endereco" type="text" class="form-control" placeholder="Endereço" aria-label="litros">
              </div>
-            <div class="input-group col-6">
+            <div class="input-group col-12">
               <span class="input-group-text">R$</span>
               <input id="valor" type="number" class="form-control" placeholder="Valor da conta de água" aria-label="valor">
             </div>
-            <div class="input-group col-6">
+            <div class="input-group col-12">
               <input id="litros" type="number" class="form-control" placeholder="Valor gasto em litros" aria-label="valor">
               <span class="input-group-text">Litros</span>
             </div>
-            <div class="col-12">
+            <div class="input-group col-12">
+              <span class="input-group-text">Data de Vencimento</span>
               <input id="data" type="date" class="form-control" placeholder="Data de vencimento" aria-label="data" >
             </div>
             
@@ -108,6 +113,25 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
             <button id="salvar" type="button" class="btn btn-primary">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="consumoModal" tabindex="-1" aria-labelledby="consumoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Consumo total</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class = "col-12">
+              <p id="GastosTotal">Total de gastos: R$ 0</p>
+              <p id="LitrosTotal"> Total de litros: 0 litros</p>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
           </div>
         </div>
       </div>
